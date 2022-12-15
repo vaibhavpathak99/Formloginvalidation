@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
-
+  
   const navigate = useNavigate();
   const onFinish = (values) => {
     console.log('Success:', values);
