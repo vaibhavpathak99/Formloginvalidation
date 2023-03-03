@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>Far from home</div>
+    <div>yes i am in home</div>
   )
 }
 
