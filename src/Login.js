@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Form, Input, Card, message } from 'antd';
-// const { Title } = Typography;
-// import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import loginpage from '../src/Images/loginpage.jpg'
 
@@ -11,12 +9,13 @@ const Login = () => {
   const info = () => {
     messageApi.open({
       type: 'error',
-      content: 'please enter a login first!!'
+      content: 'please valid username and password!!'
     })
   };
   const navigate = useNavigate();
   const onFinish = (values) => {
     console.log('Success:', values);
+    localStorage.setItem("logged", true)
     navigate("home");
   };
   const onFinishFailed = (errorInfo) => {
