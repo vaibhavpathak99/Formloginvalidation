@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,134 @@
   to {
     transform: rotate(360deg);
   }
+} */
+@import '~antd/dist/antd.css';
+/* @import '~antd/dist/antd.compact.css'; */
+
+
+:root {
+	--navbarHeight: 50px;
+	--sidebarOpenWidth: 200px;
+	--sidebarClosedWidth: 54px;
+	--sidebarFooterHeight: 25px;
+
+	--navbarBackground: #18232D;
+	--navbarColor: #fff;
+
+	--sidebarBackground: #fff;
+	--sidebarTextColor: #18232D;
+    --sidebarBorder: #cfcfcf;
+
+	--contentBackground: #fff;
+}
+
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.login-outer-div{
+	padding-top: 30px;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+
+.ant-layout-header {
+	background-color: var(--navbarBackground);
+	color: var(--navbarColor);
+	padding: 0;
+	height: var(--navbarHeight);
+	line-height: var(--navbarHeight);
+	border-bottom: 1px solid #e8e8e8;
+	/* box-shadow: 0px -15px 10px -15px #111; */
+}
+
+.sidebar-component{
+	height: 100vh;
+	overflow-y: auto;
+	background-color: var(--sidebarBackground);
+	color: var(--sidebarTextColor);
+	border-right: 1px solid var(--sidebarBorder);
+	/* Add shadow to the sidebar */
+	/* box-shadow: 0px 0px 5px 0px #111; */
+}
+
+.sidebar-top-logo{
+	/* border-right: 1px solid var(--sidebarTextColor); */
+	border-bottom: 1px solid var(--sidebarBorder);
+	height: var(--navbarHeight);
+	line-height: var(--navbarHeight);
+}
+
+.sidebar-content {
+	height: calc(100vh - var(--navbarHeight) - var(--sidebarFooterHeight) - 5px);
+	overflow: auto;
+	/* padding-bottom: 100px; */
+	overflow-x: hidden;
+}
+
+.sidebar-footer {
+	border-top: 1px solid #e8e8e8;
+	height: var(--sidebarFooterHeight);
+	line-height: var(--sidebarFooterHeight);
+
+	/* text-align: center; */
+}
+
+.main-content-div{
+	width: 100%;
+	padding: 0px 3px;
+	background-color: var(--contentBackground);
+	height: calc(100vh - var(--navbarHeight));
+	overflow: auto;
+}
+
+.navbar-component {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-between; */
+	align-items: center;
+	height: 100%;
+	/* Add bottom shadow */
+	box-shadow: 0px -15px 10px -15px #111;
+}
+
+.navbar-page-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#navbar-portal {
+	/* background-color: rgba(255, 0, 0, 0.411); */
+	width: 100%;
+	padding: 0px 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
 }
