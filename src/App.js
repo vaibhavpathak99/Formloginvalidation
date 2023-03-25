@@ -73,7 +73,7 @@ function App() {
     {
       key: "location",
       label: (
-        <Link style={{ color: 'inherit' }}to={`/home/location`}>
+        <Link style={{ color: 'inherit' }} to={`/home/location`}>
           Location
         </Link>
 
