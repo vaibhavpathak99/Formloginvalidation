@@ -7,6 +7,10 @@ import { useState } from 'react';
 import AppLayout from './AppLayout/AppLayout';
 import { AiFillHome } from "react-icons/ai";
 import { PoweroffOutlined, ToolOutlined } from '@ant-design/icons';
+import { MdPermPhoneMsg } from "react-icons/md";
+import { CgOrganisation } from "react-icons/cg";
+import { GoLocation } from "react-icons/go";
+import { BsFilePerson } from "react-icons/bs";
 import Resource from './Resource'
 import Services from './Services';
 
@@ -37,17 +41,60 @@ function App() {
       icon: <ToolOutlined />,
 
     },
+
+    {
+      key: "role",
+      label: (
+        <Link style={{ color: 'inherit' }} to={`/home/role`}>
+          Role
+        </Link>
+      ),
+      icon: <BsFilePerson />,
+    },
+    {
+      key: "company",
+      label: (
+        <Link style={{ color: 'inherit' }} to={`home/company`}>
+          company
+
+        </Link>
+      ),
+      icon: <CgOrganisation />,
+    },
+    {
+      key: "action palne",
+      label: (
+        <Link style={{ color: 'inherit' }} to={`/home/action palane`}>
+          Action Plane
+        </Link>
+      ),
+      icon: <MdPermPhoneMsg />,
+    },
+    {
+      key: "location",
+      label: (
+        <Link style={{ color: 'inherit' }}to={`/home/location`}>
+          Location
+        </Link>
+
+      ),
+      icon: <GoLocation />,
+
+    },
+
+
     {
       key: "logout",
       label: (
-        <Link to={`logout`}>
+        <Link style={{ color: 'inherit' }} to={`logout`}>
           Logout
         </Link>
-           
+
       ),
-      
-     icon: <PoweroffOutlined />
+
+      icon: <PoweroffOutlined />
     },
+
   ]
   return (
     <div className="App">
@@ -62,7 +109,7 @@ function App() {
               <Navigate replace to={"/"} />
             )
           } />
-           <Route
+        <Route
           exact
           path="/home/logout"
           element={

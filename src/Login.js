@@ -124,10 +124,11 @@ const Login = () => {
             >
               {contextHolder}
               <Button
-
-                type="primary" onClick={info}
+                onClick={info}
+                type="primary"
                 htmlType="submit"
                 size="large"
+                style={{ backgroundColor: "#ea5150", color: "black" }}
 
 
               >
