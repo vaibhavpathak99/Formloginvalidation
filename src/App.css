@@ -166,3 +166,13 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.my-form-title{
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--navbarBackground);
+	text-decoration: underline;
+	padding: 4px;
+}
+.btn{
+	float: right;
+}
