@@ -13,6 +13,7 @@ import { GoLocation } from "react-icons/go";
 import { BsFilePerson } from "react-icons/bs";
 import Resource from './Resource'
 import Services from './Services';
+import Role from './AppLayout/Role';
 
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
     {
       key: "company",
       label: (
-        <Link style={{ color: 'inherit' }} to={`home/company`}>
+        <Link style={{ color: 'inherit' }} to={`/home/company`}>
           company
 
         </Link>
@@ -73,7 +74,7 @@ function App() {
     {
       key: "location",
       label: (
-        <Link style={{ color: 'inherit' }}to={`/home/location`}>
+        <Link style={{ color: 'inherit' }} to={`/home/location`}>
           Location
         </Link>
 
@@ -125,6 +126,7 @@ function App() {
         <Route path="home" element={<AppLayout menuItems={menuItems} />}>
           <Route path="resource" element={<Resource />}></Route>
           <Route path="services" element={<Services />}></Route>
+          <Route path="role" element={<Role/>}></Route>
         </Route>
       </Routes>
 
